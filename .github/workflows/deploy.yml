@@ -15,4 +15,4 @@ jobs:
 
       - name: Deploy to server
         run: |
-          rsync -avz --delete --no-perms --no-owner --no-group ./ ${{ secrets.DEPLOY_PATH }}/ --exclude='.git' --exclude='.github'
+          rsync -avz --delete --no-perms --no-owner --no-group --no-times./ ${{ secrets.DEPLOY_PATH }}/ --exclude='.git' --exclude='.github'
